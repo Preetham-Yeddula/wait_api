@@ -1,0 +1,9 @@
+{
+    "req": {
+        "host":req.hostname,
+        "origin":req.socket.remoteAddress,
+        "url":req.url
+    },
+    "host_details":os.hostname(),
+    "res":res.statusCode
+}
