@@ -6,6 +6,9 @@ import morganMiddleware from './config/morganMiddleware'
 import { FluentClient } from '@fluent-org/logger';
 
 let app:Application = express();
+let cors = require('cors')
+
+app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(morganMiddleware)

@@ -5,6 +5,7 @@ import PayModel from "../model/model";
 import { FluentClient } from '@fluent-org/logger'
 import * as os from 'os';
 import random from 'random';
+const { Client } = require('@elastic/elasticsearch')
 
 const logger = new FluentClient("fluentd.test",{
     socket:{
@@ -54,6 +55,25 @@ function delay(ms: number) {
     return new Promise( resolve => setTimeout(resolve, ms) );
   }
 
+
+export let elastic_test = async (req: Request, res: Response) => {
+    let client = new Client({ node: 'http://52.140.66.173:9200' })
+    let { body } = await client.search({
+        index: 'fluentd-test-2021.09.14',
+        body: {
+          query: {
+            match: {res:404}
+          }
+        }
+      })
+      var re =  body.hits.hits;
+    //   for (let i in re){
+    //       res.send
+    //   }
+    // res.send(re)
+    // res.json(re)
+    res.json({data:re})
+}
 
 export let full_test = async (req:Request,res:Response)=>{
     let api_name:string = "/full_test";
