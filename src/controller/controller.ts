@@ -104,7 +104,7 @@ export let post_test_1 = async (req:Request,res:Response)=> {
     let end_time:any;
     let time:any;
     let url:any = req.originalUrl || req.url
-    await delay(500*4);
+    await delay(30*4);
 
     switch(r1){
         case 0:
@@ -160,7 +160,7 @@ export let post_test_2 = async (req:Request,res:Response)=> {
     let end_time:any;
     let time:any;
     let url:any = req.originalUrl || req.url
-    await delay(500*4);
+    await delay(50*4);
 
     switch(r1){
         case 0:
@@ -220,7 +220,7 @@ export let get_test_0 = async (req:Request,res:Response)=>{
     let end_time:any;
     let time:any;
     let url:any = req.originalUrl || req.url
-    await delay(500*4);
+    await delay(60*4);
 
     switch(r1){
         case 0:
@@ -276,7 +276,7 @@ export let get_test_1 = async (req:Request,res:Response)=>{
     let end_time:any;
     let time:any;
     let url:any = req.originalUrl || req.url
-    await delay(500*4);
+    await delay(5*4);
 
     switch(r1){
         case 0:
@@ -332,7 +332,7 @@ export let get_test_2 = async (req:Request,res:Response)=>{
     let end_time:any;
     let time:any;
     let url:any = req.originalUrl || req.url
-    await delay(500*4);
+    await delay(100*4);
 
     switch(r1){
         case 0:
