@@ -2,7 +2,7 @@ import express,{Application} from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import { router as Router } from './router/router';
-import morganMiddleware from './config/morganMiddleware'
+import morganMiddleware  from './config/morganMiddleware'
 import { FluentClient } from '@fluent-org/logger';
 
 let app:Application = express();
